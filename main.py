@@ -68,8 +68,8 @@ while True:
 
     img = Image.new("RGB", (width, height), (0, 0, 0))
     create_image()
-    img.save(f"{path}{i}.png")
-    print(f"Scaled image created as \"{path}{i}.png\" in the execution directory")
+    img.save(f"{path} {width}x{height} {i}.png")
+    print(f"Scaled image created as \"{path} {width}x{height} {i}.png\" in the execution directory")
 
     i += 1
 
