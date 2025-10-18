@@ -14,4 +14,4 @@ Just download the folder as ZIP and extract.
 * Open a terminal/cmd in that directory
 * Run: `python main.py`
 * Follow the instructions on screen
-* Files will be created in the same directory as the `main.py` file
+* Files will be created in the same directory as the original file
