@@ -36,12 +36,6 @@ def create_image():
 
 print("Enter 'Quit', 'Exit', or '0' to Terminate...")
 
-newWidth = int(input("Enter width: "))
-if newWidth == 0: terminate()
-
-newHeight = int(input("Enter height: "))
-if newHeight == 0: terminate()
-
 i = 1
 while True:
     path = path_input()
@@ -58,6 +52,12 @@ while True:
         print("\033[0;31mSomething went wrong when opening the file!\033[0m")
         continue
 
+    newWidth = int(input("Enter width: "))
+    if newWidth == 0: terminate()
+
+    newHeight = int(input("Enter height: "))
+    if newHeight == 0: terminate()
+
     image = image.convert("RGB")
 
     width, height = image.size
@@ -68,8 +68,8 @@ while True:
 
     img = Image.new("RGB", (width, height), (0, 0, 0))
     create_image()
-    img.save(f"result{i}.png")
-    print(f"Scaled image created as \"result{i}.png\" in the execution directory")
+    img.save(f"{path}{i}.png")
+    print(f"Scaled image created as \"{path}{i}.png\" in the execution directory")
 
     i += 1
 
